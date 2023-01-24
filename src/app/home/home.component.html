@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let data of hero;let index = index;" class="col-lg-4">
+      <input type="text" [(ngModel)] ="data.name"  class="form-control" placeholder="name">
+      <input type="text" [(ngModel)] ="data.description" class="form-control" placeholder="description" >
+      <input type="text" [(ngModel)] ="data.country"  class="form-control" placeholder="country" >
+      <input type="radio"  [(ngModel)]="data.gender"  value="male" >male
+      <input type="radio"  [(ngModel)]="data.gender" value="female" > female
+      <!-- <input type="text" [(ngModel)] ="data.gender"  class="form-control" placeholder="gender" > -->
+      <input type="text" [(ngModel)] ="data.picture"  class="form-control" placeholder="picture Link" >
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img [src]="data.picture" style="width:300px;height:300px;border-radius: 50%;">
+        <h2>          {{data.name}}        </h2>
+        <h4>           {{data.description}}  </h4>       
+    </div>
+      <div class="flip-card-back">
+        <h1>{{data.country}}</h1>
+        <p>im a {{data.gender}}</p>
+        <p>We love that {{data.gender}}</p>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+      
+  
+  </div>
+</div>
+
+  
